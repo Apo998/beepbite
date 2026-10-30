@@ -1,0 +1,27 @@
+.support{position:relative;z-index:1;flex:1;width:min(1120px,100%);margin:0 auto;padding:8px 20px 64px;display:flex;flex-direction:column;gap:36px}
+.support__head{display:flex;flex-direction:column;gap:12px;max-width:640px}
+.support__head .label{color:var(--color-tomato)}
+.support__head h1{font-size:clamp(2.6rem,8vw,4.75rem);line-height:.9}
+.support__head p{font-size:var(--text-lg);color:var(--color-text-muted);max-width:52ch}
+.support__grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:32px;align-items:start}
+.support__card h2{font-size:clamp(1.9rem,4vw,2.4rem)}
+.support__select{appearance:none;padding-right:48px;cursor:pointer}
+.support__select:invalid{color:#8A9493}
+.field__control .support__chevron{left:auto;right:16px;transform:rotate(90deg)}
+.support__message{min-height:150px;resize:vertical;line-height:1.5}
+.support__count{text-align:right;font-variant-numeric:tabular-nums}
+.support__side{display:flex;flex-direction:column;gap:32px}
+.support__block{display:flex;flex-direction:column;gap:14px}
+.support__title{font-size:var(--text-2xl);letter-spacing:-.03em;color:var(--color-ink)}
+.support__qa{display:flex;flex-direction:column;gap:10px}
+.support__qa details{background:var(--color-surface);border:var(--border-ink);border-radius:var(--radius-lg);box-shadow:var(--shadow-hard-sm)}
+.support__qa summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 18px;cursor:pointer;font-family:var(--font-display);font-weight:800;font-size:1.1rem;letter-spacing:-.02em;color:var(--color-pan-teal)}
+.support__qa summary::-webkit-details-marker{display:none}
+.support__qa summary::after{content:"+";flex:none;width:28px;height:28px;display:grid;place-items:center;border-radius:50%;background:var(--color-butter);border:2px solid var(--color-ink);font-size:1.1rem;color:var(--color-ink);transition:transform var(--duration-base) var(--ease-standard)}
+.support__qa details[open] summary::after{transform:rotate(45deg)}
+.support__qa summary:focus-visible{outline:3px solid var(--color-tomato);outline-offset:2px;border-radius:var(--radius-lg)}
+.support__a{overflow:hidden;display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:0 18px 18px}
+.support__a p{max-width:60ch}
+.support__a a{font-weight:700;overflow-wrap:anywhere}
+.support .auth__back{margin-top:0}
+@media (max-width:900px){.support__grid{grid-template-columns:minmax(0,1fr)}}

@@ -1,0 +1,14 @@
+.intro{display:flex;flex-direction:column;gap:4px}
+.intro .hand{font-size:1.6rem;color:var(--color-tomato);transform:rotate(-3deg);transform-origin:0 50%}
+.intro h1{font-size:2.1rem;line-height:.95}
+.ready-list{display:flex;flex-direction:column;gap:16px}
+.ready-card{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:6px;padding:20px;background:var(--color-tomato);color:var(--color-crust);border:var(--border-ink);border-radius:var(--radius-xl);box-shadow:var(--shadow-hard);text-decoration:none;transition:transform var(--duration-fast) var(--ease-standard),box-shadow var(--duration-fast) var(--ease-standard)}
+.ready-card:nth-child(even){transform:rotate(.8deg)}
+.ready-card:nth-child(odd){transform:rotate(-.8deg)}
+.ready-card:hover{transform:translate(-2px,-2px) rotate(0);box-shadow:var(--shadow-hard-lg)}
+.ready-card__pattern{position:absolute;right:-2px;top:-2px;width:132px;height:132px;border-bottom-left-radius:100%;border-left:2px solid var(--color-ink);border-bottom:2px solid var(--color-ink);--ripple-band:13px}
+.ready-card .label,.ready-card .order-no{position:relative}
+.ready-card .order-no{font-size:5.25rem;color:var(--color-crust);margin-top:6px}
+.ready-card__foot{position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:8px;padding-top:12px;border-top:2px dashed rgba(255,240,212,.55);font-weight:600;font-size:var(--text-sm)}
+.ready-card__go{display:inline-flex;align-items:center;gap:4px;padding:6px 8px 6px 12px;border-radius:var(--radius-full);background:var(--color-crust);color:var(--color-tomato);border:2px solid var(--color-ink);font-weight:700}
+.ready-card .badge{position:absolute;left:20px;top:-14px}

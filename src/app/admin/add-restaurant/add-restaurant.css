@@ -1,0 +1,17 @@
+.add{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:28px;align-items:start}
+@media (max-width:1000px){.add{grid-template-columns:1fr}}
+.card{display:flex;flex-direction:column;gap:20px;padding:28px;background:var(--color-surface);border:var(--border-ink);border-radius:var(--radius-xl);box-shadow:var(--shadow-hard)}
+.card h2{font-size:var(--text-xl);letter-spacing:-.03em;color:var(--color-ink)}
+.pw-row{display:flex;gap:10px}
+.pw-row .field__control{flex:1}
+.form-actions{display:flex;gap:12px;flex-wrap:wrap}
+.form-actions .btn--primary{flex:1;min-width:220px}
+
+
+.next-card{display:flex;flex-direction:column;gap:12px}
+.next-card .label{color:var(--color-tomato)}
+.next{display:flex;flex-direction:column;gap:12px;counter-reset:n}
+.next li{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;font-size:var(--text-sm)}
+.next li::before{counter-increment:n;content:counter(n);width:30px;height:30px;display:grid;place-items:center;border-radius:50%;background:var(--color-pan-teal);color:var(--color-crust);border:2px solid var(--color-ink);font-family:var(--font-display);font-weight:800}
+.next b{display:block;color:var(--color-ink);font-size:var(--text-md)}
+.next-card .hand{transform:rotate(-3deg);font-size:1.4rem}

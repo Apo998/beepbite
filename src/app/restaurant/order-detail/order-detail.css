@@ -1,0 +1,26 @@
+.detail{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:24px;align-items:start}
+@media (max-width:900px){.detail{grid-template-columns:1fr}}
+
+
+.ticket{position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;gap:12px;padding:40px 20px 24px;text-align:center;border:var(--border-ink);border-radius:var(--radius-xl);box-shadow:var(--shadow-hard-lg);background:var(--color-butter);color:var(--color-ink);isolation:isolate;transition:background-color var(--duration-base),color var(--duration-base)}
+.ticket .rings{top:38%;z-index:-1}
+.ticket .rings span:nth-child(1){width:220px;height:220px;border-color:var(--color-surface);opacity:.55}
+.ticket .rings span:nth-child(2){width:316px;height:316px;border-color:var(--color-surface);opacity:.3}
+.ticket .rings span:nth-child(3){width:412px;height:412px;border-color:var(--color-surface);opacity:.18}
+.ticket .order-no{font-size:7.5rem}
+.ticket__amount{display:flex;align-items:baseline;gap:8px;margin-top:6px;padding:8px 18px;background:var(--color-surface);color:var(--color-ink);border:2px solid var(--color-ink);border-radius:var(--radius-full);font-weight:600}
+.ticket__amount b{font-family:var(--font-display);font-size:var(--text-2xl);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.ticket .burst{top:38%;z-index:-1}
+.ticket[data-status="READY"]{background:var(--color-tomato);color:var(--color-crust)}
+.ticket[data-status="READY"] .order-no{text-shadow:4px 4px 0 var(--color-ink)}
+.ticket[data-status="READY"] .badge--ready{background:var(--color-crust);color:var(--color-tomato)}
+.ticket[data-status="COMPLETED"]{background:var(--color-surface);border-style:dashed;box-shadow:none}
+.ticket[data-status="COMPLETED"] .rings span{border-color:var(--color-status-completed)}
+
+.side{display:flex;flex-direction:column;gap:20px}
+.side h2{font-size:var(--text-xl);letter-spacing:-.03em;color:var(--color-ink)}
+.status-note{font-size:var(--text-sm);color:var(--color-text-muted)}
+.back{align-self:flex-start}
+.dialog h2{font-size:var(--text-2xl);letter-spacing:-.035em}
+.dialog__actions{display:flex;gap:10px}
+.dialog__actions>*{flex:1}

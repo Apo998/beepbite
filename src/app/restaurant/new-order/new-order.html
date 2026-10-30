@@ -1,0 +1,68 @@
+<ng-container ngNonBindable>
+
+    <div class="rapp" data-overlay-root>
+      <aside class="rail" data-rail="new"></aside>
+
+      <div class="rmain">
+        <header class="rbar">
+          <div class="rbar__title"><span class="label" data-restaurant></span><h1>New order</h1></div>
+          <div class="rbar__meta"><span class="live">Live</span><span class="rbar__clock" data-clock></span></div>
+        </header>
+
+        <main class="rcontent">
+          <div class="order-grid">
+            <section class="panel" aria-labelledby="scan-title" data-scan-box data-scan="idle">
+              <div class="panel__head"><span class="step-no">1</span><h2 id="scan-title">Scan the customer's code</h2></div>
+              <button class="viewfinder" type="button" aria-describedby="vf-msg" data-viewfinder>
+                <span class="viewfinder__qr qr" data-qr="11"></span>
+                <span class="viewfinder__frame"></span>
+                <span class="viewfinder__line"></span>
+                <span class="viewfinder__msg" id="vf-msg" data-vf-msg>Tap to scan the customer's code</span>
+                <span class="viewfinder__result" data-for="found"><svg data-icon="check"></svg><b>Code scanned</b><span class="num" data-found-code></span></span>
+                <span class="viewfinder__result" data-for="failed"><svg data-icon="x"></svg><b data-fail-title>Code not found</b><span data-fail-msg>We couldn't find that code. Ask the customer to show it again.</span></span>
+              </button>
+              <form class="manual" novalidate data-manual>
+                <label class="field__label" for="code">No camera? Type the customer's full code</label>
+                <div class="manual__row">
+                  <div class="field__control" style="flex:1"><svg data-icon="qr"></svg><input class="field__input" id="code" placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" autocomplete="off" spellcheck="false" maxlength="36"></div>
+                  <button class="btn" type="submit">Find</button>
+                </div>
+              </form>
+              <button class="btn btn--sm rescan" type="button" data-rescan hidden><svg data-icon="refresh" class="icon--sm"></svg>Scan a different code</button>
+            </section>
+
+            <section class="panel" aria-labelledby="amount-title">
+              <div class="panel__head"><span class="step-no">2</span><h2 id="amount-title">Amount paid</h2></div>
+              <div class="amount-display is-empty" aria-live="polite"><span>Total</span><b data-amount>0.00</b></div>
+              <div class="keypad" data-keypad aria-label="Amount keypad">
+                <button type="button" data-key="1">1</button><button type="button" data-key="2">2</button><button type="button" data-key="3">3</button>
+                <button type="button" data-key="4">4</button><button type="button" data-key="5">5</button><button type="button" data-key="6">6</button>
+                <button type="button" data-key="7">7</button><button type="button" data-key="8">8</button><button type="button" data-key="9">9</button>
+                <button type="button" data-key=".">.</button><button type="button" data-key="0">0</button><button type="button" data-key="back" aria-label="Delete"><svg data-icon="backspace"></svg></button>
+              </div>
+              <button class="btn btn--primary btn--block btn--xl" type="button" data-create disabled>Create order</button>
+              <p class="hint" aria-live="polite" data-hint>Scan the customer's code first.</p>
+            </section>
+          </div>
+        </main>
+      </div>
+
+      <div class="scrim scrim--center" data-success hidden>
+        <div class="dialog success" role="dialog" aria-modal="true" aria-labelledby="ok-title">
+          <div class="success__num">
+            <div class="rings" aria-hidden="true"><span></span><span></span><span></span></div>
+            <span class="burst"></span><span class="burst"></span>
+            <span class="label">Order created</span>
+            <span class="order-no" data-new-num></span>
+          </div>
+          <h2 id="ok-title" data-ok-title></h2>
+          <p class="muted">It shows on their phone too. They get a beep the moment you mark it Ready.</p>
+          <div class="dialog__actions">
+            <button class="btn btn--primary" type="button" data-again><svg data-icon="plus"></svg>New order</button>
+            <a class="btn" href="/restaurant/orders"><svg data-icon="board"></svg>Open board</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</ng-container>

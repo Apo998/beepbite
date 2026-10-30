@@ -1,0 +1,44 @@
+<ng-container ngNonBindable>
+<svg class="arcs arcs--tr" viewBox="0 0 360 400" aria-hidden="true" data-arcs>
+  <g fill="none">
+    <path d="M186 -10V200A174 174 0 0 0 360 374H370" stroke="var(--color-ink)" stroke-width="52"/>
+    <path d="M186 -10V200A174 174 0 0 0 360 374H370" stroke="var(--color-pan-teal)" stroke-width="48"/>
+    <path d="M238 -10V200A122 122 0 0 0 360 322H370" stroke="var(--color-ink)" stroke-width="52"/>
+    <path d="M238 -10V200A122 122 0 0 0 360 322H370" stroke="var(--color-butter)" stroke-width="48"/>
+    <path d="M290 -10V200A70 70 0 0 0 360 270H370" stroke="var(--color-ink)" stroke-width="52"/>
+    <path d="M290 -10V200A70 70 0 0 0 360 270H370" stroke="var(--color-tomato)" stroke-width="48"/>
+  </g>
+</svg>
+
+<header class="auth__top">
+  <a class="brand" href="/" data-transition aria-label="BeepBite home"><svg data-logo class="logo-mark"></svg>beepbite</a>
+</header>
+
+<main class="nf">
+  <div class="nf__code" aria-label="404">
+    <span aria-hidden="true">4</span>
+    <span class="nf__zero" aria-hidden="true">
+      <svg viewBox="0 0 200 200" data-face>
+        <circle cx="100" cy="100" r="90" fill="var(--color-tomato)" mask="url(#bite-full)"/>
+        <circle cx="100" cy="100" r="89" fill="none" stroke="var(--color-ink)" stroke-width="4" mask="url(#bite-full)"/>
+        <g fill="none" stroke="var(--color-ink)" stroke-width="8" stroke-linecap="round">
+          <circle class="eye" cx="66" cy="108" r="9" fill="var(--color-ink)" stroke="none"/>
+          <circle class="eye" cx="104" cy="108" r="9" fill="var(--color-ink)" stroke="none"/>
+          <path d="M52 92q11-12 24-6M92 86q13-6 24 6"/>
+          <ellipse cx="85" cy="142" rx="10" ry="12" fill="var(--color-ink)" stroke="none"/>
+        </g>
+      </svg>
+      <span class="nf__crumbs"><span></span><span></span><span></span></span>
+      <span class="speech speech--butter nf__speech">crumbs!</span>
+    </span>
+    <span aria-hidden="true">4</span>
+  </div>
+
+  <h1>This page got eaten.</h1>
+  <p>The link might be old, or someone took a bite out of it. Nothing you did.</p>
+  <span class="nf__path" aria-label="Address you tried"><svg data-icon="search" class="icon--sm"></svg><code data-path>/orders/old-link</code></span>
+  <div class="nf__actions" data-actions></div>
+  <span class="hand">four teeth. always four. pages? not always.</span>
+</main>
+
+</ng-container>

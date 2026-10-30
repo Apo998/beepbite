@@ -1,0 +1,64 @@
+<ng-container ngNonBindable>
+<div class="aapp" data-overlay-root>
+  <aside class="sidebar" data-sidebar="list"></aside>
+
+  <div class="amain">
+    <header class="abar">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/admin/restaurants">Restaurants</a><svg data-icon="chevron"></svg><span aria-current="page" data-crumb></span></nav>
+      <div class="account-menu" data-account></div>
+    </header>
+
+    <main class="acontent">
+      <div class="detail" data-found hidden>
+        <div class="col">
+          <section class="hero" aria-labelledby="name">
+            <span class="hero__pattern ripple-pattern" aria-hidden="true"></span>
+            <span data-tile></span>
+            <div class="hero__text">
+              <span class="badge badge--plain">Restaurant</span>
+              <h1 id="name" data-name></h1>
+              <span class="hand" data-since></span>
+            </div>
+          </section>
+
+          <section class="col" aria-labelledby="acc" style="gap:12px">
+            <h2 id="acc">Account</h2>
+            <dl class="details">
+              <div><dt>Restaurant name</dt><dd data-name></dd></div>
+              <div><dt>Sign-in email</dt><dd><span data-email-row></span><button class="copy" type="button" data-copy hidden>Copy</button></dd></div>
+              <div><dt>Role</dt><dd>Restaurant</dd></div>
+              <div><dt>Joined</dt><dd data-joined></dd></div>
+            </dl>
+          </section>
+
+          <a class="btn" href="/admin/restaurants" style="align-self:flex-start"><svg data-icon="back"></svg>All restaurants</a>
+        </div>
+
+        <div class="col">
+          <section class="signin" aria-labelledby="signin-title">
+            <span class="label">How they sign in</span>
+            <h2 id="signin-title" style="font-size:var(--text-xl);letter-spacing:-.03em;color:var(--color-ink)">On their counter tablet</h2>
+            <ol>
+              <li><span>Open the BeepBite sign-in page.</span></li>
+              <li><span>Use <b data-email></b> and the temporary password you sent.</span></li>
+              <li><span>They land on New Order and can start scanning codes.</span></li>
+            </ol>
+          </section>
+          <div class="help">
+            <svg data-icon="info"></svg>
+            <span>Name or email need changing? Restaurants ask through <b>partner&#64;beepbite.net</b>.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="empty" data-missing hidden>
+        <span data-mascot-slot></span>
+        <h3>Restaurant not found</h3>
+        <p>It may have been removed, or the link is wrong.</p>
+        <a class="btn btn--primary" href="/admin/restaurants"><svg data-icon="store"></svg>All restaurants</a>
+      </div>
+    </main>
+  </div>
+</div>
+
+</ng-container>

@@ -1,0 +1,64 @@
+<ng-container ngNonBindable>
+<div class="aapp" data-overlay-root>
+  <aside class="sidebar" data-sidebar="list"></aside>
+
+  <div class="amain">
+    <header class="abar">
+      <nav class="crumbs" aria-label="Breadcrumb"><span>Partners</span><svg data-icon="chevron"></svg><span aria-current="page">Restaurants</span></nav>
+      <div class="account-menu" data-account></div>
+    </header>
+
+    <main class="acontent">
+      <div class="page-head">
+        <div>
+          <h1>Restaurants</h1>
+          <p data-subtitle>Every counter on BeepBite. Add one and they can sign in straight away.</p>
+        </div>
+        <a class="btn btn--primary" href="/admin/restaurants/new" data-transition><svg data-icon="plus"></svg>Add restaurant</a>
+      </div>
+
+      <div class="stats" data-content data-has-rows>
+        <div class="stat stat--butter"><b data-total>0</b><span>restaurants on BeepBite</span></div>
+        <div class="stat"><b data-month>0</b><span data-month-label>joined this month</span></div>
+        <div class="stat stat--newest"><b data-newest>–</b><span data-newest-date>newest partner</span></div>
+      </div>
+
+      <div class="toolbar" data-content data-has-rows>
+        <form class="search" role="search" data-search-form>
+          <label class="sr-only" for="q">Search restaurants</label>
+          <div class="field__control">
+            <svg data-icon="search"></svg>
+            <input class="field__input" id="q" type="search" placeholder="Search by name or email" autocomplete="off" data-q>
+          </div>
+          <button class="search__clear" type="button" aria-label="Clear search" data-clear hidden><svg data-icon="x" class="icon--sm"></svg></button>
+        </form>
+        <div class="tabs" role="tablist" aria-label="Sort">
+          <button class="tab" type="button" role="tab" aria-selected="true" data-sort="new">Newest first</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-sort="az">A–Z</button>
+        </div>
+      </div>
+
+      <div class="table-wrap" data-loading aria-busy="true" aria-label="Loading">
+        <table class="table"><tbody>
+          <tr><td><span class="skel skel--line" style="width:60%;height:20px"></span></td><td><span class="skel skel--line"></span></td><td><span class="skel skel--line" style="width:70%"></span></td></tr>
+          <tr><td><span class="skel skel--line" style="width:50%;height:20px"></span></td><td><span class="skel skel--line"></span></td><td><span class="skel skel--line" style="width:70%"></span></td></tr>
+          <tr><td><span class="skel skel--line" style="width:65%;height:20px"></span></td><td><span class="skel skel--line"></span></td><td><span class="skel skel--line" style="width:70%"></span></td></tr>
+          <tr><td><span class="skel skel--line" style="width:45%;height:20px"></span></td><td><span class="skel skel--line"></span></td><td><span class="skel skel--line" style="width:70%"></span></td></tr>
+        </tbody></table>
+      </div>
+
+      <div data-content>
+        <p class="results" aria-live="polite" data-results></p>
+        <div class="table-wrap" data-table-wrap style="margin-top:10px">
+          <table class="table">
+            <thead><tr><th scope="col">Restaurant</th><th scope="col">Sign-in email</th><th scope="col">Joined</th><th scope="col" class="end"><span class="sr-only">Open</span></th></tr></thead>
+            <tbody data-rows></tbody>
+          </table>
+        </div>
+        <div data-empty hidden></div>
+      </div>
+    </main>
+  </div>
+</div>
+
+</ng-container>

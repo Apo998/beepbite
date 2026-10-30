@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="10 10 180 180" role="img" aria-label="BeepBite mark, one colour">
+  <title>BeepBite mark, one colour</title>
+  <defs>
+  <mask id="bb-bite" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="200">
+    <rect width="200" height="200" fill="#fff"/>
+    <circle cx="168" cy="32" r="86" fill="#000"/><circle cx="168" cy="32" r="79" fill="#fff"/>
+    <circle cx="168" cy="32" r="69" fill="#000"/><circle cx="168" cy="32" r="62" fill="#fff"/>
+    <circle cx="168" cy="32" r="48" fill="#000"/>
+    <circle cx="160.5" cy="79.4" r="7" fill="#000"/><circle cx="141.9" cy="72.3" r="7" fill="#000"/>
+    <circle cx="127.7" cy="58.1" r="7" fill="#000"/><circle cx="120.6" cy="39.5" r="7" fill="#000"/>
+  </mask>
+  </defs>
+  <circle cx="100" cy="100" r="90" fill="#1C1A17" mask="url(#bb-bite)"/>
+</svg>

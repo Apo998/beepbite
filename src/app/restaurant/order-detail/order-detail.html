@@ -1,0 +1,78 @@
+<ng-container ngNonBindable>
+
+    <div class="rapp" data-overlay-root>
+      <aside class="rail" data-rail="board"></aside>
+
+      <div class="rmain">
+        <header class="rbar">
+          <a class="icon-btn" href="/restaurant/orders" aria-label="Back to board"><svg data-icon="back"></svg></a>
+          <div class="rbar__title"><span class="label" data-restaurant></span><h1 data-title>Order</h1></div>
+          <div class="rbar__meta"><span class="live">Live</span><span class="rbar__clock" data-clock></span></div>
+        </header>
+
+        <main class="rcontent">
+          <div class="detail" data-found hidden>
+            <section class="ticket" aria-label="Order" data-ticket data-status="READY">
+              <div class="rings" aria-hidden="true"><span></span><span></span><span></span></div>
+              <span class="burst"></span><span class="burst"></span>
+              <span class="label">Order</span>
+              <span class="order-no" data-num></span>
+              <span class="badge badge--lg badge--ready" data-badge>Ready</span>
+              <span class="ticket__amount">Paid <b data-amount></b></span>
+            </section>
+
+            <div class="side">
+              <section class="side" aria-labelledby="status-title" style="gap:12px">
+                <h2 id="status-title">Status</h2>
+                <div class="status-control" role="group" aria-label="Order status" data-control>
+                  <button type="button" data-status="PREPARING" aria-pressed="false">Preparing</button>
+                  <button type="button" data-status="READY" aria-pressed="true">Ready</button>
+                  <button type="button" data-status="COMPLETED" aria-pressed="false">Completed</button>
+                </div>
+                <p class="status-note" data-note>Marking it Ready beeps the customer's phone.</p>
+              </section>
+
+              <section class="panel" aria-label="Progress" style="box-shadow:var(--shadow-hard-sm)">
+                <div style="position:relative">
+                  <span class="stepper__fill" data-fill></span>
+                  <ol class="stepper" data-stepper>
+                    <li><span class="stepper__dot"><svg data-icon="check"></svg></span><span class="stepper__text"><b>Preparing</b><small data-step-note></small></span></li>
+                    <li><span class="stepper__dot"><svg data-icon="check"></svg></span><span class="stepper__text"><b>Ready</b><small data-step-note></small></span></li>
+                    <li><span class="stepper__dot"><svg data-icon="check"></svg></span><span class="stepper__text"><b>Completed</b><small data-step-note></small></span></li>
+                  </ol>
+                </div>
+              </section>
+
+              <dl class="details">
+                <div><dt>Order number</dt><dd data-d-num></dd></div>
+                <div><dt>Amount paid</dt><dd data-d-amount></dd></div>
+                <div><dt>Created</dt><dd data-d-created></dd></div>
+                <div><dt>Last update</dt><dd data-d-updated></dd></div>
+              </dl>
+
+              <a class="btn back" href="/restaurant/orders"><svg data-icon="board"></svg>Back to board</a>
+            </div>
+          </div>
+
+          <div class="empty" data-missing hidden>
+            <span data-mascot-slot></span>
+            <h3>Order not found</h3>
+            <p>This order isn't here any more. It may have been removed.</p>
+            <a class="btn btn--primary" href="/restaurant/orders"><svg data-icon="board"></svg>Back to board</a>
+          </div>
+        </main>
+      </div>
+
+      <div class="scrim scrim--center" data-confirm hidden>
+        <div class="dialog" role="alertdialog" aria-modal="true" aria-labelledby="confirm-title" aria-describedby="confirm-text">
+          <h2 id="confirm-title" data-confirm-title></h2>
+          <p class="muted" id="confirm-text">The customer's screen changes too. Use this when an order was marked by mistake.</p>
+          <div class="dialog__actions">
+            <button class="btn" type="button" data-cancel>Keep it</button>
+            <button class="btn btn--teal" type="button" data-ok>Move back</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</ng-container>

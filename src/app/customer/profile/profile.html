@@ -1,0 +1,69 @@
+<ng-container ngNonBindable>
+
+    <div class="app" data-overlay-root>
+      <header class="top-bar">
+        <a class="brand brand--sm" href="/customer" aria-label="BeepBite home"><svg data-logo class="logo-mark"></svg>beepbite</a>
+        <span class="top-bar__spacer"></span>
+      </header>
+
+      <main class="app__main">
+        <span class="skel" data-loading style="height:210px;border-radius:var(--radius-xl)"></span>
+        <div class="stats" data-loading><span class="skel skel--card"></span><span class="skel skel--card"></span><span class="skel skel--card"></span></div>
+        <span class="skel" data-loading style="height:120px;border-radius:var(--radius-lg)"></span>
+
+        <section class="profile" aria-labelledby="name" data-content>
+          <span class="profile__pattern ripple-pattern" aria-hidden="true"></span>
+          <span class="avatar" aria-hidden="true"><svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="currentColor" mask="url(#bite-full)"/></svg><span data-initials></span></span>
+          <div>
+            <h1 id="name" data-name></h1>
+            <p class="profile__email" data-email></p>
+          </div>
+          <span class="badge badge--plain">Customer</span>
+        </section>
+
+        <div class="stats" data-content>
+          <div class="stat stat--butter"><b data-points>0</b><span>points</span></div>
+          <div class="stat"><b data-picked>0</b><span>orders picked up</span></div>
+          <div class="stat"><b data-since>–</b><span data-since-year>member since</span></div>
+        </div>
+
+        <section class="group" aria-labelledby="acc" data-content>
+          <h2 id="acc">Account</h2>
+          <dl class="details">
+            <div><dt>Name</dt><dd data-name></dd></div>
+            <div><dt>Email</dt><dd data-email></dd></div>
+          </dl>
+        </section>
+
+        <section class="group" aria-labelledby="help" data-content>
+          <h2 id="help">Help</h2>
+          <div class="list">
+            <a class="list-row" href="/#how"><svg data-icon="info"></svg><span class="list-row__body">How BeepBite works<small>Show, sit, beep.</small></span><svg data-icon="chevron" class="list-row__end"></svg></a>
+            <a class="list-row" href="/#faq"><svg data-icon="help"></svg><span class="list-row__body">Questions &amp; answers</span><svg data-icon="chevron" class="list-row__end"></svg></a>
+            <a class="list-row" href="/support"><svg data-icon="mail"></svg><span class="list-row__body">Contact support<small>Send us a message</small></span><svg data-icon="chevron" class="list-row__end"></svg></a>
+          </div>
+        </section>
+
+        <button class="btn btn--danger btn--block" type="button" data-signout data-content><svg data-icon="logout"></svg>Sign out</button>
+
+        <div class="signoff" data-content>
+          <span class="hand">four teeth. always four.</span>
+          <small>BeepBite</small>
+        </div>
+      </main>
+
+      <nav class="bottom-nav" aria-label="Main" data-bottom-nav="profile"></nav>
+
+      <div class="scrim" data-sheet hidden>
+        <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="so-title">
+          <h2 id="so-title">Sign out?</h2>
+          <p class="muted">You'll need your email and password to get your code back on this phone.</p>
+          <div class="sheet__actions">
+            <a class="btn btn--primary btn--block" href="/auth/callback?state=signout&amp;auto=1&amp;role=CUSTOMER" data-transition>Sign out</a>
+            <button class="btn btn--block" type="button" data-cancel>Stay signed in</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</ng-container>

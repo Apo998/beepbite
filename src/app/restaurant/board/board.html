@@ -1,0 +1,42 @@
+<ng-container ngNonBindable>
+
+    <div class="rapp" data-overlay-root>
+      <aside class="rail" data-rail="board"></aside>
+
+      <div class="rmain">
+        <header class="rbar">
+          <div class="rbar__title"><span class="label" data-restaurant></span><h1>Today's orders</h1></div>
+          <div class="rbar__meta">
+            <span class="rbar__sum" data-sum></span>
+            <span class="rbar__clock" data-clock></span>
+            <a class="btn btn--primary btn--sm" href="/restaurant/orders/new"><svg data-icon="plus" class="icon--sm"></svg>New order</a>
+          </div>
+        </header>
+
+        <main class="rcontent">
+          <div class="board" data-loading aria-busy="true" aria-label="Loading">
+            <div class="col"><span class="skel skel--line" style="width:50%"></span><span class="skel" style="height:118px;border-radius:var(--radius-lg)"></span><span class="skel" style="height:118px;border-radius:var(--radius-lg)"></span></div>
+            <div class="col"><span class="skel skel--line" style="width:50%"></span><span class="skel" style="height:118px;border-radius:var(--radius-lg)"></span></div>
+            <div class="col"><span class="skel skel--line" style="width:50%"></span><span class="skel skel--card" style="height:44px"></span><span class="skel skel--card" style="height:44px"></span></div>
+          </div>
+
+          <div class="board" data-board data-content>
+            <section class="col" data-col="PREPARING" aria-label="Preparing">
+              <header class="col__head"><span class="badge badge--lg badge--preparing">Preparing</span><span class="col__count" data-count>0</span></header>
+              <div class="col__list" data-list></div>
+            </section>
+            <section class="col" data-col="READY" aria-label="Ready">
+              <header class="col__head"><span class="badge badge--lg badge--ready">Ready</span><span class="col__count" data-count>0</span></header>
+              <div class="col__list" data-list></div>
+            </section>
+            <section class="col" data-col="COMPLETED" aria-label="Completed">
+              <header class="col__head"><span class="badge badge--lg badge--completed">Completed</span><span class="col__count" data-count>0</span></header>
+              <div class="col__list" data-list></div>
+              <button class="btn btn--ghost btn--sm col__more" type="button" data-more hidden></button>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+
+</ng-container>

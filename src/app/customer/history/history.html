@@ -1,0 +1,32 @@
+<ng-container ngNonBindable>
+
+    <div class="app" data-overlay-root>
+      <header class="top-bar">
+        <a class="brand brand--sm" href="/customer" aria-label="BeepBite home"><svg data-logo class="logo-mark"></svg>beepbite</a>
+        <span class="live">Live</span>
+      </header>
+
+      <main class="app__main">
+        <div class="head">
+          <h1>Your orders</h1>
+          <span class="hand" data-content data-has-orders data-summary></span>
+        </div>
+
+        <div class="filters" data-content data-has-orders>
+          <div class="tabs" role="tablist" aria-label="Filter by status" data-tabs></div>
+        </div>
+
+        <div class="groups" data-loading aria-busy="true" aria-label="Loading">
+          <span class="skel skel--line" style="width:30%"></span>
+          <span class="skel skel--card"></span><span class="skel skel--card"></span><span class="skel skel--card"></span>
+          <span class="skel skel--line" style="width:30%"></span>
+          <span class="skel skel--card"></span><span class="skel skel--card"></span>
+        </div>
+
+        <div class="groups" role="tabpanel" data-list data-content></div>
+      </main>
+
+      <nav class="bottom-nav" aria-label="Main" data-bottom-nav="orders"></nav>
+    </div>
+
+</ng-container>

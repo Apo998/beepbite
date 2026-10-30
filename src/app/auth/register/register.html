@@ -1,0 +1,80 @@
+<ng-container ngNonBindable>
+<svg class="arcs arcs--tr" viewBox="0 0 360 400" aria-hidden="true" data-arcs>
+  <g fill="none">
+    <path d="M186 -10V200A174 174 0 0 0 360 374H370" stroke="var(--color-ink)" stroke-width="52"/>
+    <path d="M186 -10V200A174 174 0 0 0 360 374H370" stroke="var(--color-butter)" stroke-width="48"/>
+    <path d="M238 -10V200A122 122 0 0 0 360 322H370" stroke="var(--color-ink)" stroke-width="52"/>
+    <path d="M238 -10V200A122 122 0 0 0 360 322H370" stroke="var(--color-tomato)" stroke-width="48"/>
+    <path d="M290 -10V200A70 70 0 0 0 360 270H370" stroke="var(--color-ink)" stroke-width="52"/>
+    <path d="M290 -10V200A70 70 0 0 0 360 270H370" stroke="var(--color-pan-teal)" stroke-width="48"/>
+  </g>
+</svg>
+<svg class="arcs arcs--bl" viewBox="0 0 210 420" aria-hidden="true" data-arcs>
+  <g fill="none">
+    <path d="M-10 26H0A174 174 0 0 1 174 200V430" stroke="var(--color-ink)" stroke-width="52"/>
+    <path d="M-10 26H0A174 174 0 0 1 174 200V430" stroke="var(--color-pan-teal)" stroke-width="48"/>
+    <path d="M-10 78H0A122 122 0 0 1 122 200V430" stroke="var(--color-ink)" stroke-width="52"/>
+    <path d="M-10 78H0A122 122 0 0 1 122 200V430" stroke="var(--color-tomato)" stroke-width="48"/>
+    <path d="M-10 130H0A70 70 0 0 1 70 200V430" stroke="var(--color-ink)" stroke-width="52"/>
+    <path d="M-10 130H0A70 70 0 0 1 70 200V430" stroke="var(--color-butter)" stroke-width="48"/>
+  </g>
+</svg>
+
+<header class="auth__top">
+  <a class="brand" href="/" data-transition aria-label="BeepBite home"><svg data-logo class="logo-mark"></svg>beepbite</a>
+
+</header>
+
+<main class="auth__main">
+  <div class="auth__wrap" data-card>
+    <span class="sticker auth__sticker" aria-hidden="true"><span>Free<br>&amp; ready<br>(beep)</span></span>
+    <p class="hand auth__note auth__note--right" aria-hidden="true">20 seconds.<br>we timed it.</p>
+
+    <section class="auth__card" aria-labelledby="title">
+      <div class="auth__head">
+        <span class="label" style="color:var(--color-tomato)">Create account</span>
+        <h1 id="title">Get your code.</h1>
+        <p>Your personal QR code is ready the moment you're in. Show it at any BeepBite counter.</p>
+      </div>
+
+      <form class="auth__form" novalidate data-form>
+        <div class="field" data-field="name">
+          <label class="field__label" for="name">Your name</label>
+          <div class="field__control">
+            <svg data-icon="user"></svg>
+            <input class="field__input" id="name" name="name" type="text" autocomplete="name" placeholder="Lina Haddad" aria-describedby="name-error" required>
+          </div>
+          <p class="inline-error" id="name-error" hidden></p>
+        </div>
+
+        <div class="field" data-field="email">
+          <label class="field__label" for="email">Email</label>
+          <div class="field__control">
+            <svg data-icon="mail"></svg>
+            <input class="field__input" id="email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you&#64;example.com" aria-describedby="email-error" required>
+          </div>
+          <p class="inline-error" id="email-error" hidden></p>
+        </div>
+
+        <div class="field" data-field="password">
+          <label class="field__label" for="password">Password</label>
+          <div class="field__control">
+            <svg data-icon="lock"></svg>
+            <input class="field__input" id="password" name="password" type="password" autocomplete="new-password" placeholder="At least 8 characters" aria-describedby="password-hint password-error" required>
+            <button class="field__toggle" type="button" aria-label="Show password" aria-pressed="false" data-password-toggle></button>
+          </div>
+          <p class="field__hint" id="password-hint">At least 8 characters.</p>
+          <p class="inline-error" id="password-error" hidden></p>
+        </div>
+
+        <button class="btn btn--primary btn--block" type="submit" data-submit>Create account</button>
+      </form>
+
+      <p class="auth__switch">Already have an account? <a href="/login" data-transition>Sign in</a></p>
+      <p class="auth__roles"><span>Run a restaurant? We set up your account. <a href="/#partner">Partner with us</a></span></p>
+    </section>
+    <a class="auth__back" href="/" data-transition><svg data-icon="back" class="icon--sm"></svg>Back to home</a>
+  </div>
+</main>
+
+</ng-container>

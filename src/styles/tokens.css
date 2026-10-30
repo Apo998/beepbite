@@ -1,0 +1,87 @@
+:root {
+  
+  --color-tomato: #F0492B;    
+  --color-pan-teal: #0F4C4A;  
+  --color-butter: #FFC94A;
+  --color-crust: #FFF0D4;
+  --color-ink: #1C1A17;       
+
+  
+  --color-bg: var(--color-crust);
+  --color-surface: #FFF8EA;
+  --color-text: var(--color-pan-teal);
+  --color-text-strong: var(--color-ink);
+  --color-text-muted: #4D6B69;
+  --color-primary: var(--color-tomato);
+  --color-on-primary: var(--color-crust);
+  --color-accent: var(--color-butter);
+  --color-on-accent: var(--color-ink);
+  --color-band-dark: var(--color-pan-teal);   
+  --color-on-band-dark: var(--color-crust);
+  --color-line: var(--color-ink);
+
+  
+  --color-status-preparing: var(--color-butter);
+  --color-status-ready: var(--color-tomato);     
+  --color-status-completed: #7FA3A1;             
+
+  
+  --color-success: var(--color-pan-teal);
+  --color-warning: var(--color-butter);
+  --color-danger: #B42318;                       
+  --color-info: var(--color-pan-teal);
+
+  
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif; 
+  --font-body: "Bricolage Grotesque", system-ui, sans-serif;    
+  --font-hand: "Caveat", "Comic Sans MS", cursive;              
+  --weight-display: 800;
+  --weight-body: 400;
+  --weight-strong: 600;
+  --tracking-display: -0.04em;
+  --tracking-label: 0.12em;                                     
+
+  --text-xs: 0.75rem;    
+  --text-sm: 0.875rem;   
+  --text-md: 1rem;       
+  --text-lg: 1.125rem;   
+  --text-xl: 1.375rem;   
+  --text-2xl: 1.75rem;   
+  --text-3xl: 2.25rem;   
+  --text-4xl: 3rem;      
+  --text-5xl: 4rem;      
+  --text-hero: clamp(3.5rem, 9vw, 7.5rem);
+  --text-order-number: clamp(3.5rem, 18vw, 6rem);
+
+  
+  --space-1: 4px;  --space-2: 8px;  --space-3: 12px; --space-4: 16px;
+  --space-5: 20px; --space-6: 24px; --space-8: 32px; --space-10: 40px;
+  --space-12: 48px; --space-16: 64px; --space-24: 96px;
+
+  
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 28px;
+  --radius-icon: 22%;     
+  --radius-full: 999px;
+
+  
+  --border-ink: 2px solid var(--color-ink);
+  --shadow-hard-sm: 2px 2px 0 var(--color-ink);
+  --shadow-hard: 4px 4px 0 var(--color-ink);
+  --shadow-hard-lg: 6px 6px 0 var(--color-ink);
+
+  
+  --ripple-band: 24px;
+
+  
+  --duration-fast: 160ms;   
+  --duration-base: 320ms;   
+  --duration-slow: 700ms;   
+  --ease-standard: cubic-bezier(0.2, 0.7, 0.2, 1);   
+  --ease-pop: cubic-bezier(0.34, 1.56, 0.64, 1);     
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);     
+
+  
+}

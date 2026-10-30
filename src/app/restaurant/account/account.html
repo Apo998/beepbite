@@ -1,0 +1,72 @@
+<ng-container ngNonBindable>
+
+    <div class="rapp" data-overlay-root>
+      <aside class="rail" data-rail="account"></aside>
+
+      <div class="rmain">
+        <header class="rbar">
+          <div class="rbar__title"><span class="label" data-restaurant></span><h1>Account</h1></div>
+          <div class="rbar__meta"><span class="rbar__clock" data-clock></span></div>
+        </header>
+
+        <main class="rcontent">
+          <div class="account">
+            <div class="col">
+              <section class="profile" aria-labelledby="name">
+                <span class="profile__pattern ripple-pattern" aria-hidden="true"></span>
+                <span class="profile__icon" aria-hidden="true"><svg data-logo class="profile__logo"></svg></span>
+                <div>
+                  <h2 id="name" data-name></h2>
+                  <p class="profile__email" data-email></p>
+                </div>
+                <span class="badge badge--plain">Restaurant</span>
+                <span class="hand" data-since></span>
+              </section>
+
+              <dl class="details">
+                <div><dt>Restaurant name</dt><dd data-name></dd></div>
+                <div><dt>Sign-in email</dt><dd data-email></dd></div>
+                <div><dt>Joined BeepBite</dt><dd data-joined>–</dd></div>
+              </dl>
+            </div>
+
+            <div class="col">
+              <section class="col" aria-labelledby="today" style="gap:12px">
+                <h2 id="today">Today so far</h2>
+                <div class="stats">
+                  <div class="stat"><b data-s-orders>0</b><span>orders</span></div>
+                  <div class="stat stat--ready"><b data-s-ready>0</b><span>waiting at the counter</span></div>
+                  <div class="stat"><b data-s-total>0.00</b><span>taken today</span></div>
+                </div>
+              </section>
+
+              <div class="help">
+                <svg data-icon="mail"></svg>
+                <span>Need to change your name or email? Write to <a href="mailto:partner&#64;beepbite.net">partner&#64;beepbite.net</a> and we'll update it for you.</span>
+              </div>
+
+              <div class="list">
+                <a class="list-row" href="/restaurant/orders"><svg data-icon="board"></svg><span class="list-row__body">Order board<small>Today's orders by status</small></span><svg data-icon="chevron" class="list-row__end"></svg></a>
+                <a class="list-row" href="/#faq"><svg data-icon="help"></svg><span class="list-row__body">Questions &amp; answers</span><svg data-icon="chevron" class="list-row__end"></svg></a>
+                <a class="list-row" href="/support"><svg data-icon="mail"></svg><span class="list-row__body">Contact support<small>Send us a message</small></span><svg data-icon="chevron" class="list-row__end"></svg></a>
+              </div>
+
+              <button class="btn btn--danger btn--block" type="button" data-signout><svg data-icon="logout"></svg>Sign out</button>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <div class="scrim scrim--center" data-dialog hidden>
+        <div class="dialog" role="alertdialog" aria-modal="true" aria-labelledby="so-title" aria-describedby="so-text">
+          <h2 id="so-title">Sign out?</h2>
+          <p class="muted" id="so-text">Today's orders stay safe. Sign in again on this tablet to keep serving.</p>
+          <div class="dialog__actions">
+            <button class="btn" type="button" data-cancel>Stay signed in</button>
+            <a class="btn btn--primary" href="/auth/callback?state=signout&amp;auto=1&amp;role=RESTAURANT" data-transition>Sign out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</ng-container>

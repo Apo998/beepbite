@@ -1,0 +1,9 @@
+.head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
+.head h1{font-size:2.4rem;line-height:.9}
+.head .hand{flex:none;font-size:1.2rem;text-align:right;transform:rotate(-4deg);transform-origin:100% 50%;padding-right:6px}
+.filters{position:sticky;top:64px;z-index:5;margin:-8px -16px 0;padding:10px 16px 8px;background:var(--color-bg)}
+
+.groups{display:flex;flex-direction:column;gap:22px}
+.group{display:flex;flex-direction:column;gap:10px}
+.group__day{display:flex;align-items:center;gap:10px;font-weight:600;font-size:var(--text-xs);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--color-text-muted)}
+.group__day::after{content:"";flex:1;height:2px;background:repeating-linear-gradient(90deg,rgba(28,26,23,.25) 0 6px,transparent 6px 11px)}

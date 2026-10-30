@@ -1,0 +1,31 @@
+<ng-container ngNonBindable>
+
+    <div class="app" data-overlay-root>
+      <header class="top-bar">
+        <a class="icon-btn" href="/customer" aria-label="Back to home"><svg data-icon="back"></svg></a>
+        <span class="top-bar__title">Ready for pickup</span>
+        <span class="live">Live</span>
+      </header>
+
+      <main class="app__main">
+        <div class="ready-list" data-loading aria-busy="true" aria-label="Loading">
+          <span class="skel skel--line" style="width:40%"></span>
+          <span class="skel skel--title" style="width:80%"></span>
+          <span class="skel" style="height:190px;border-radius:var(--radius-xl)"></span>
+          <span class="skel" style="height:190px;border-radius:var(--radius-xl)"></span>
+        </div>
+
+        <div class="intro" data-content data-has-items>
+          <p class="hand">go go go!</p>
+          <h1 data-title></h1>
+        </div>
+
+        <div class="ready-list" data-list data-content></div>
+
+        <a class="btn btn--butter btn--block" href="/customer?state=enlarged" data-content data-has-items><svg data-icon="qr"></svg>Show my code</a>
+      </main>
+
+      <nav class="bottom-nav" aria-label="Main" data-bottom-nav="home"></nav>
+    </div>
+
+</ng-container>

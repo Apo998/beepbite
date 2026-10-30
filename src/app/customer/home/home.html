@@ -1,0 +1,73 @@
+<ng-container ngNonBindable>
+
+    <div class="app" data-overlay-root>
+      <header class="top-bar">
+        <a class="brand brand--sm" href="/customer" aria-label="BeepBite home"><svg data-logo class="logo-mark"></svg>beepbite</a>
+        <span class="points-chip" aria-label="Your points"><span class="coin" aria-hidden="true"></span><span><b class="num" data-points-chip>0</b> pts</span></span>
+      </header>
+
+      <main class="app__main">
+        <div class="loading-stack" data-loading aria-busy="true" aria-label="Loading">
+          <span class="skel skel--line" style="width:30%"></span>
+          <span class="skel skel--title"></span>
+          <span class="skel skel--qr"></span>
+          <span class="skel skel--card"></span>
+        </div>
+
+        <a class="ready-banner" href="/customer/ready" data-ready-banner data-content hidden>
+          <span class="burst"></span><span class="burst"></span>
+          <span class="ready-banner__icon"><svg data-icon="bell"></svg></span>
+          <span class="ready-banner__text"><b data-ready-title>Beep! Your order is ready</b><small data-ready-sub></small></span>
+          <svg data-icon="chevron"></svg>
+          <span class="ready-banner__ripple ripple-pattern" aria-hidden="true"></span>
+        </a>
+
+        <div class="greet" data-content>
+          <p class="hand" data-hello>hey,</p>
+          <h1>Show this at the counter.</h1>
+        </div>
+
+        <section class="qr-card" aria-labelledby="qr-title" data-qr-card data-content>
+          <div class="qr-card__top"><span class="label" id="qr-title">Your code</span><span class="qr-card__name" data-name></span></div>
+          <button class="qr-card__code" type="button" aria-label="Make your code bigger" data-qr-open data-code><div class="qr" data-qr-img></div></button>
+          <div class="qr-card__foot" data-code>
+            <span class="muted">Can't scan? Tap Bigger for the full code.</span>
+            <button class="btn btn--sm" type="button" data-qr-open><svg data-icon="expand" class="icon--sm"></svg>Bigger</button>
+          </div>
+          <div class="qr-card__missing" data-code-missing hidden>
+            <svg data-icon="qr"></svg>
+            <b>Your code didn't load</b>
+            <span class="muted">Check your connection and open this page again.</span>
+          </div>
+        </section>
+
+        <section class="points-card" aria-label="Your points" data-content>
+          <svg class="points-card__coin" viewBox="0 0 100 100" aria-hidden="true" data-coin>
+            <circle cx="50" cy="50" r="46" fill="var(--color-surface)" stroke="var(--color-ink)" stroke-width="4"/>
+            <circle cx="50" cy="50" r="34" fill="none" stroke="var(--color-ink)" stroke-width="3" stroke-dasharray="4 6"/>
+            <svg x="28" y="28" width="44" height="44" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="var(--color-tomato)" mask="url(#bite-quiet)"/></svg>
+          </svg>
+          <span class="points-card__value"><b data-points>0</b><span>points</span></span>
+          <span class="hand" aria-hidden="true">every pickup<br>adds up</span>
+        </section>
+
+        <section class="kitchen" aria-labelledby="kitchen-title" data-content>
+          <div class="section-title"><h2 id="kitchen-title">In the kitchen</h2><a href="/customer/orders">All orders</a></div>
+          <div class="kitchen__list" data-kitchen></div>
+        </section>
+      </main>
+
+      <nav class="bottom-nav" aria-label="Main" data-bottom-nav="home"></nav>
+
+      <div class="qr-full" role="dialog" aria-modal="true" aria-labelledby="qr-full-name" data-qr-full hidden>
+        <button class="icon-btn qr-full__close" type="button" aria-label="Close" data-qr-close><svg data-icon="x"></svg></button>
+        <span class="label" style="color:var(--color-tomato)">Your code</span>
+        <span class="qr-full__name" id="qr-full-name"></span>
+        <div class="qr" data-qr-img></div>
+        <span class="qr-full__code">Can't scan? Read out <b class="num" data-full-code></b></span>
+        <span class="qr-full__tip"><svg data-icon="sun" class="icon--sm"></svg>Screen brightness up</span>
+      </div>
+
+    </div>
+
+</ng-container>

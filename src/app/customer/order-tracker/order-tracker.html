@@ -1,0 +1,61 @@
+<ng-container ngNonBindable>
+
+    <div class="app" data-overlay-root>
+      <header class="top-bar">
+        <a class="icon-btn" href="/customer" aria-label="Back" data-back><svg data-icon="back"></svg></a>
+        <span class="top-bar__title" data-restaurant></span>
+        <span class="live" data-live>Live</span>
+      </header>
+
+      <main class="app__main">
+        <div class="hero" data-loading aria-busy="true" aria-label="Loading">
+          <span class="skel skel--line" style="width:90px"></span>
+          <span class="skel" style="width:170px;height:96px;border-radius:var(--radius-lg)"></span>
+          <span class="skel skel--line" style="width:110px"></span>
+        </div>
+        <span class="skel" data-loading style="height:190px;border-radius:var(--radius-lg)"></span>
+
+        <section class="hero" aria-live="polite" data-content data-found>
+          <div class="rings" aria-hidden="true"><span></span><span></span><span></span></div>
+          <span class="burst"></span><span class="burst"></span><span class="burst"></span>
+          <span class="label">Your order</span>
+          <span class="order-no order-no--hero" data-num><small>#</small>12</span>
+          <span class="badge badge--lg badge--ready" data-badge>Ready</span>
+          <p class="hero__msg" data-msg>Beep! Go to the counter and show your code.</p>
+          <span class="points-chip done-chip"><span class="coin" aria-hidden="true"></span>+15 points added</span>
+          <span class="sticker" aria-hidden="true" data-sticker><span>Still<br>warm<br>(beep)</span></span>
+        </section>
+
+        <a class="btn btn--butter btn--block" href="/customer?state=enlarged" data-show-code data-content data-found><svg data-icon="qr"></svg>Show my code</a>
+
+        <section class="box" aria-label="Progress" data-content data-found>
+          <div style="position:relative">
+            <span class="stepper__fill" data-fill></span>
+            <ol class="stepper" data-stepper>
+              <li><span class="stepper__dot"><svg data-icon="check"></svg></span><span class="stepper__text"><b>Preparing</b><small data-step-note></small></span></li>
+              <li><span class="stepper__dot"><svg data-icon="check"></svg></span><span class="stepper__text"><b>Ready</b><small data-step-note></small></span></li>
+              <li><span class="stepper__dot"><svg data-icon="check"></svg></span><span class="stepper__text"><b>Completed</b><small data-step-note></small></span></li>
+            </ol>
+          </div>
+        </section>
+
+        <dl class="details" data-content data-found>
+          <div><dt>Restaurant</dt><dd data-d-restaurant></dd></div>
+          <div><dt>Amount paid</dt><dd data-d-amount></dd></div>
+          <div><dt>Ordered</dt><dd data-d-time></dd></div>
+        </dl>
+
+        <p class="tip" data-content data-found><svg data-icon="sound" class="icon--sm"></svg><span>Keep this page open. It updates live and beeps when your order is ready.</span></p>
+
+        <div class="empty" data-content data-missing hidden>
+          <span data-mascot-slot></span>
+          <h3>We can't find this order</h3>
+          <p data-missing-msg>This order isn't here any more. It may have been removed.</p>
+          <a class="btn btn--primary" href="/customer/orders">See all orders</a>
+        </div>
+      </main>
+
+      <nav class="bottom-nav" aria-label="Main" data-bottom-nav="orders"></nav>
+    </div>
+
+</ng-container>

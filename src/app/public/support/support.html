@@ -1,0 +1,135 @@
+<ng-container ngNonBindable>
+<svg class="arcs arcs--tr" viewBox="0 0 360 400" aria-hidden="true" data-arcs>
+  <g fill="none">
+    <path d="M186 -10V200A174 174 0 0 0 360 374H370" stroke="var(--color-ink)" stroke-width="52"/>
+    <path d="M186 -10V200A174 174 0 0 0 360 374H370" stroke="var(--color-pan-teal)" stroke-width="48"/>
+    <path d="M238 -10V200A122 122 0 0 0 360 322H370" stroke="var(--color-ink)" stroke-width="52"/>
+    <path d="M238 -10V200A122 122 0 0 0 360 322H370" stroke="var(--color-butter)" stroke-width="48"/>
+    <path d="M290 -10V200A70 70 0 0 0 360 270H370" stroke="var(--color-ink)" stroke-width="52"/>
+    <path d="M290 -10V200A70 70 0 0 0 360 270H370" stroke="var(--color-tomato)" stroke-width="48"/>
+  </g>
+</svg>
+<svg class="arcs arcs--bl" viewBox="0 0 210 420" aria-hidden="true" data-arcs>
+  <g fill="none">
+    <path d="M-10 26H0A174 174 0 0 1 174 200V430" stroke="var(--color-ink)" stroke-width="52"/>
+    <path d="M-10 26H0A174 174 0 0 1 174 200V430" stroke="var(--color-tomato)" stroke-width="48"/>
+    <path d="M-10 78H0A122 122 0 0 1 122 200V430" stroke="var(--color-ink)" stroke-width="52"/>
+    <path d="M-10 78H0A122 122 0 0 1 122 200V430" stroke="var(--color-butter)" stroke-width="48"/>
+    <path d="M-10 130H0A70 70 0 0 1 70 200V430" stroke="var(--color-ink)" stroke-width="52"/>
+    <path d="M-10 130H0A70 70 0 0 1 70 200V430" stroke="var(--color-pan-teal)" stroke-width="48"/>
+  </g>
+</svg>
+
+<header class="auth__top">
+  <a class="brand" href="/" data-transition aria-label="BeepBite home"><svg data-logo class="logo-mark"></svg>beepbite</a>
+  <a class="btn btn--butter btn--sm" href="/login" data-transition data-top-link>Sign in</a>
+</header>
+
+<main class="support">
+  <div class="support__head" data-head>
+    <span class="label">Support</span>
+    <h1 id="title">How can we help?</h1>
+    <p>Most answers are a tap away. Still stuck? Send us a message and we'll reply by email.</p>
+  </div>
+
+  <div class="support__grid">
+    <section class="auth__card support__card" aria-labelledby="form-title" data-card>
+      <div class="auth__head">
+        <h2 id="form-title">Send us a message</h2>
+        <p>Tell us what happened. The more detail, the faster we can help.</p>
+      </div>
+
+      <div class="alert alert--success" role="status" data-alert-success hidden><svg data-icon="check"></svg><span data-success-text></span></div>
+      <div class="alert" role="alert" data-alert-error hidden><svg data-icon="alert"></svg><span data-error-text></span></div>
+
+      <form class="auth__form" novalidate data-form>
+        <div class="field" data-field="name">
+          <label class="field__label" for="name">Your name</label>
+          <div class="field__control">
+            <svg data-icon="user"></svg>
+            <input class="field__input" id="name" name="name" type="text" autocomplete="name" maxlength="80" placeholder="Lina Haddad" aria-describedby="name-error" required>
+          </div>
+          <p class="inline-error" id="name-error" hidden></p>
+        </div>
+
+        <div class="field" data-field="email">
+          <label class="field__label" for="email">Email</label>
+          <div class="field__control">
+            <svg data-icon="mail"></svg>
+            <input class="field__input" id="email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="254" placeholder="you&#64;example.com" aria-describedby="email-hint email-error" required>
+          </div>
+          <p class="field__hint" id="email-hint">We'll reply to this address.</p>
+          <p class="inline-error" id="email-error" hidden></p>
+        </div>
+
+        <div class="field" data-field="topic">
+          <label class="field__label" for="topic">What's it about?</label>
+          <div class="field__control">
+            <svg data-icon="help"></svg>
+            <select class="field__input support__select" id="topic" name="topic" aria-describedby="topic-error" required>
+              <option value="" selected disabled>Pick a topic</option>
+              <option value="account">Account &amp; sign in</option>
+              <option value="orders">Orders &amp; pickup</option>
+              <option value="points">Points</option>
+              <option value="restaurants">Restaurant partners</option>
+              <option value="other">Something else</option>
+            </select>
+            <svg data-icon="chevron" class="support__chevron"></svg>
+          </div>
+          <p class="inline-error" id="topic-error" hidden></p>
+        </div>
+
+        <div class="field" data-field="message">
+          <label class="field__label" for="message">Message</label>
+          <textarea class="field__input support__message" id="message" name="message" rows="6" minlength="10" maxlength="2000" placeholder="What happened, and when? Add your order number if it's about an order." aria-describedby="message-hint message-error" required></textarea>
+          <p class="field__hint support__count" id="message-hint" data-count>0 / 2000</p>
+          <p class="inline-error" id="message-error" hidden></p>
+        </div>
+
+        <button class="btn btn--primary btn--block" type="submit" data-submit>Send message</button>
+      </form>
+
+      <button class="btn btn--ghost btn--block" type="button" data-again hidden>Send another message</button>
+    </section>
+
+    <div class="support__side">
+      <section class="support__block" aria-labelledby="qa-title" data-side>
+        <h2 class="support__title" id="qa-title">Quick answers</h2>
+        <div class="support__qa">
+          <details>
+            <summary>I forgot my password.</summary>
+            <div class="support__a"><p>On the sign-in page, tap <b>Forgot password?</b> and enter your email. We'll send you a link to pick a new password. It works once, for 30 minutes.</p><a href="/forgot-password" data-transition>Reset my password</a></div>
+          </details>
+          <details>
+            <summary>How will I know my order is ready?</summary>
+            <div class="support__a"><p>Keep your order page open. It updates live, and the moment the kitchen marks your order Ready, it beeps and turns Tomato.</p></div>
+          </details>
+          <details>
+            <summary>The cashier can't scan my code.</summary>
+            <div class="support__a"><p>Turn your screen brightness up and tap your code to open it full screen. If it still won't scan, the cashier can type in the code shown under it.</p></div>
+          </details>
+          <details>
+            <summary>Where are my points?</summary>
+            <div class="support__a"><p>Your balance sits on your home screen next to your code. You get 15 points for every order you pick up.</p></div>
+          </details>
+          <details>
+            <summary>I run a restaurant. How do I join?</summary>
+            <div class="support__a"><p>We set up restaurant accounts for you. Write to us and tell us about your place.</p><a href="mailto:partner&#64;beepbite.net">partner&#64;beepbite.net</a></div>
+          </details>
+        </div>
+      </section>
+
+      <section class="support__block" aria-labelledby="direct-title" data-side>
+        <h2 class="support__title" id="direct-title">Email us directly</h2>
+        <div class="list">
+          <a class="list-row" href="mailto:support&#64;beepbite.net"><svg data-icon="mail"></svg><span class="list-row__body">Help with your account or an order<small>support&#64;beepbite.net</small></span><svg data-icon="chevron" class="list-row__end"></svg></a>
+          <a class="list-row" href="mailto:partner&#64;beepbite.net"><svg data-icon="store"></svg><span class="list-row__body">Restaurants and partnerships<small>partner&#64;beepbite.net</small></span><svg data-icon="chevron" class="list-row__end"></svg></a>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <a class="auth__back" href="/" data-transition><svg data-icon="back" class="icon--sm"></svg>Back to home</a>
+</main>
+
+</ng-container>

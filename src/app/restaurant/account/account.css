@@ -1,0 +1,23 @@
+.account{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
+@media (max-width:900px){.account{grid-template-columns:1fr}}
+.col{display:flex;flex-direction:column;gap:20px}
+.col h2{font-size:var(--text-xl);letter-spacing:-.03em;color:var(--color-ink)}
+.profile{position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:flex-start;gap:14px;padding:24px;background:var(--color-pan-teal);color:var(--color-crust);border:var(--border-ink);border-radius:var(--radius-xl);box-shadow:var(--shadow-hard)}
+.profile__pattern{position:absolute;right:-2px;top:-2px;width:150px;height:150px;border-bottom-left-radius:100%;border-left:2px solid var(--color-ink);border-bottom:2px solid var(--color-ink);--ripple-band:14px}
+.profile__icon{width:72px;height:72px;display:grid;place-items:center;border-radius:var(--radius-icon);background:var(--color-tomato);border:2px solid var(--color-ink);box-shadow:var(--shadow-hard-sm);color:var(--color-crust)}
+.profile__icon svg{width:46px;height:46px}
+.profile h2{font-size:2.4rem;line-height:.95;color:var(--color-crust)}
+.profile__email{opacity:.85;overflow-wrap:anywhere}
+.profile .badge{background:var(--color-crust);color:var(--color-ink)}
+.profile .hand{color:var(--color-butter);font-size:1.4rem}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.stat{display:flex;flex-direction:column;gap:6px;padding:14px;background:var(--color-surface);border:var(--border-ink);border-radius:var(--radius-lg);box-shadow:var(--shadow-hard-sm);color:var(--color-ink)}
+.stat b{font-family:var(--font-display);font-weight:800;font-size:clamp(1.5rem,2.4vw,2rem);letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums}
+.stat span{font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.25}
+.stat--ready{background:var(--color-tomato);color:var(--color-crust)}
+.stat--ready span{color:var(--color-crust)}
+.help{display:flex;gap:12px;align-items:flex-start;padding:16px;border:2px dashed rgba(28,26,23,.35);border-radius:var(--radius-lg);font-size:var(--text-sm)}
+.help a{font-weight:700;overflow-wrap:anywhere}
+.dialog h2{font-size:var(--text-2xl);letter-spacing:-.035em}
+.dialog__actions{display:flex;gap:10px}
+.dialog__actions>*{flex:1}
